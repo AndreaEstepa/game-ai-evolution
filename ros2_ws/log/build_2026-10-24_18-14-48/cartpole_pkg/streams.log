@@ -1,0 +1,27 @@
+[0.554s] Invoking command in '/home/robotica/ros2_ws/build/cartpole_pkg': PYTHONPATH=/home/robotica/ros2_ws/build/cartpole_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotica/ros2_ws/install/cartpole_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/robotica/ros2_ws/build/cartpole_pkg/build --no-deps symlink_data
+[0.720s] /usr/lib/python3.10/distutils/dist.py:274: UserWarning: Unknown distribution option: 'test_require'
+[0.720s]   warnings.warn(msg)
+[0.755s] running develop
+[0.871s] running egg_info
+[0.871s] creating cartpole_pkg.egg-info
+[0.871s] writing cartpole_pkg.egg-info/PKG-INFO
+[0.871s] writing dependency_links to cartpole_pkg.egg-info/dependency_links.txt
+[0.871s] writing entry points to cartpole_pkg.egg-info/entry_points.txt
+[0.872s] writing requirements to cartpole_pkg.egg-info/requires.txt
+[0.872s] writing top-level names to cartpole_pkg.egg-info/top_level.txt
+[0.872s] writing manifest file 'cartpole_pkg.egg-info/SOURCES.txt'
+[0.873s] package init file 'cartpole_pkg/__init__.py' not found (or not a regular file)
+[0.873s] reading manifest file 'cartpole_pkg.egg-info/SOURCES.txt'
+[0.873s] writing manifest file 'cartpole_pkg.egg-info/SOURCES.txt'
+[0.874s] running build_ext
+[0.875s] Creating /home/robotica/ros2_ws/install/cartpole_pkg/lib/python3.10/site-packages/cartpole-pkg.egg-link (link to .)
+[0.875s] Installing cartpole_controller script to /home/robotica/ros2_ws/install/cartpole_pkg/bin
+[0.875s] 
+[0.875s] Installed /home/robotica/ros2_ws/build/cartpole_pkg
+[0.875s] running symlink_data
+[0.876s] creating /home/robotica/ros2_ws/install/cartpole_pkg/share
+[0.876s] creating /home/robotica/ros2_ws/install/cartpole_pkg/share/ament_index
+[0.876s] creating /home/robotica/ros2_ws/install/cartpole_pkg/share/ament_index/resource_index
+[0.876s] error: can't copy '/home/robotica/ros2_ws/build/cartpole_pkg/resource/cartpole_pkg': doesn't exist or not a regular file
+[0.876s] creating /home/robotica/ros2_ws/install/cartpole_pkg/share/ament_index/resource_index/packages
+[0.896s] Invoked command in '/home/robotica/ros2_ws/build/cartpole_pkg' returned '1': PYTHONPATH=/home/robotica/ros2_ws/build/cartpole_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/robotica/ros2_ws/install/cartpole_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/robotica/ros2_ws/build/cartpole_pkg/build --no-deps symlink_data
