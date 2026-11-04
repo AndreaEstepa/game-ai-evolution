@@ -2,7 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image, Range
-from geometry_msgs.msg
+from geometry_msgs.msg import *
 
 class CartpoleController(Node):
     def __init__(self):
