@@ -1,0 +1,61 @@
+[0.000000] (-) TimerEvent: {}
+[0.000769] (cartpole_pkg) JobQueued: {'identifier': 'cartpole_pkg', 'dependencies': OrderedDict()}
+[0.001188] (cartpole_pkg) JobStarted: {'identifier': 'cartpole_pkg'}
+[0.099269] (-) TimerEvent: {}
+[0.199790] (-) TimerEvent: {}
+[0.300367] (-) TimerEvent: {}
+[0.400895] (-) TimerEvent: {}
+[0.501444] (-) TimerEvent: {}
+[0.602011] (-) TimerEvent: {}
+[0.702428] (-) TimerEvent: {}
+[0.802835] (-) TimerEvent: {}
+[0.903193] (-) TimerEvent: {}
+[1.003566] (-) TimerEvent: {}
+[1.103957] (-) TimerEvent: {}
+[1.204383] (-) TimerEvent: {}
+[1.304791] (-) TimerEvent: {}
+[1.405198] (-) TimerEvent: {}
+[1.505596] (-) TimerEvent: {}
+[1.606185] (-) TimerEvent: {}
+[1.706649] (-) TimerEvent: {}
+[1.744964] (cartpole_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/cartpole_pkg', 'build', '--build-base', '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/build/cartpole_pkg/build', 'install', '--record', '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/build/cartpole_pkg/install.log', '--install-scripts', '$base/lib/cartpole_pkg', '--single-version-externally-managed', 'install_data'], 'cwd': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/src/cartpole_pkg', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'es_ES', 'USER': 'pegaso', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SEAT': 'seat0', 'PT8HOME': '/opt/pt', 'SSH_AGENT_PID': '8940', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pegaso', 'GIT_CONFIG_COUNT': '1', 'OLDPWD': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics', 'DESKTOP_SESSION': 'cinnamon', 'NVM_BIN': '/home/pegaso/.nvm/versions/node/v24.15.0/bin', 'NVM_INC': '/home/pegaso/.nvm/versions/node/v24.15.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'COPILOT_CLI': '1', 'CINNAMON_VERSION': '6.4.14', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GITHUB_COPILOT_RIPGREP_PATH_OVERRIDE': '/home/pegaso/.cache/pkg/f2ee496a39139b8d9ad9408081217a55f1382cef4950100565d147d247364856/rg', 'INSIDE_NEMO_PYTHON': '', 'NVM_DIR': '/home/pegaso/.nvm', 'TMPDIR': '/tmp/github-copilot-1i9La1', 'COLCON_PREFIX_PATH': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pegaso', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-color', 'XDG_SESSION_ID': 'c2', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'GIT_CONFIG_VALUE_0': 'explicit', 'PATH': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install/cartpole_pkg/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/pegaso/.opencode/bin:/home/pegaso/.nvm/versions/node/v24.15.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/idea-IC-252.25557.131/bin:/media/pegaso/4C22A6E222A6D06E/Programas/aseprite/build/bin:/media/pegaso/4C22A6E222A6D06E2/Programas/pycharm-2025.3.3/bin/', 'SESSION_MANAGER': 'local/cinnamonRoll:@/tmp/.ICE-unix/1861,unix/cinnamonRoll:/tmp/.ICE-unix/1861', 'GDM_LANG': 'es_ES', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/6567c072_d9d6_4978_8897_a820a2bdc7a7', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'es_ES.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/pegaso/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.129', 'SSH_AUTH_SOCK': '/tmp/ssh-zf32wYboH51h/agent.8939', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/pegaso', 'AMENT_PREFIX_PATH': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install/cartpole_pkg:/opt/ros/jazzy', 'COPILOT_AGENT_SESSION_ID': '387791ad-d8d4-4faa-a090-42e76bd7796a', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'cinnamon', 'GIT_CONFIG_KEY_0': 'safe.bareRepository', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'XDG_VTNR': '7', 'PWD': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/build/cartpole_pkg', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/pegaso/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'PYTHONPATH': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/build/cartpole_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install/cartpole_pkg/lib/python3.12/site-packages:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/build/cartpole_pkg:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install/cartpole_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[1.806678] (-) TimerEvent: {}
+[1.907000] (-) TimerEvent: {}
+[2.007372] (-) TimerEvent: {}
+[2.107801] (-) TimerEvent: {}
+[2.116932] (cartpole_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[2.141705] (cartpole_pkg) StdoutLine: {'line': b'writing ../../build/cartpole_pkg/cartpole_pkg.egg-info/PKG-INFO\n'}
+[2.142392] (cartpole_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/cartpole_pkg/cartpole_pkg.egg-info/dependency_links.txt\n'}
+[2.142940] (cartpole_pkg) StdoutLine: {'line': b'writing entry points to ../../build/cartpole_pkg/cartpole_pkg.egg-info/entry_points.txt\n'}
+[2.143293] (cartpole_pkg) StdoutLine: {'line': b'writing requirements to ../../build/cartpole_pkg/cartpole_pkg.egg-info/requires.txt\n'}
+[2.143740] (cartpole_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/cartpole_pkg/cartpole_pkg.egg-info/top_level.txt\n'}
+[2.198431] (cartpole_pkg) StdoutLine: {'line': b"reading manifest file '../../build/cartpole_pkg/cartpole_pkg.egg-info/SOURCES.txt'\n"}
+[2.203657] (cartpole_pkg) StdoutLine: {'line': b"writing manifest file '../../build/cartpole_pkg/cartpole_pkg.egg-info/SOURCES.txt'\n"}
+[2.204109] (cartpole_pkg) StdoutLine: {'line': b'running build\n'}
+[2.204441] (cartpole_pkg) StdoutLine: {'line': b'running build_py\n'}
+[2.205280] (cartpole_pkg) StdoutLine: {'line': b'copying cartpole_pkg/cartpole_controller.py -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/build/cartpole_pkg/build/lib/cartpole_pkg\n'}
+[2.207342] (cartpole_pkg) StdoutLine: {'line': b'running install\n'}
+[2.207867] (-) TimerEvent: {}
+[2.217790] (cartpole_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[2.261612] (cartpole_pkg) StdoutLine: {'line': b'copying /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/build/cartpole_pkg/build/lib/cartpole_pkg/cartpole_controller.py -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/install/cartpole_pkg/lib/python3.12/site-packages/cartpole_pkg\n'}
+[2.267262] (cartpole_pkg) StdoutLine: {'line': b'byte-compiling /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/install/cartpole_pkg/lib/python3.12/site-packages/cartpole_pkg/cartpole_controller.py to cartpole_controller.cpython-312.pyc\n'}
+[2.272720] (cartpole_pkg) StdoutLine: {'line': b'running install_data\n'}
+[2.275469] (cartpole_pkg) StdoutLine: {'line': b'copying package.xml -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/install/cartpole_pkg/share/cartpole_pkg\n'}
+[2.278359] (cartpole_pkg) StdoutLine: {'line': b'copying launch/launch.py -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/install/cartpole_pkg/share/cartpole_pkg/launch\n'}
+[2.282102] (cartpole_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.307988] (-) TimerEvent: {}
+[2.336348] (cartpole_pkg) StdoutLine: {'line': b"removing '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/install/cartpole_pkg/lib/python3.12/site-packages/cartpole_pkg-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[2.341979] (cartpole_pkg) StdoutLine: {'line': b'Copying ../../build/cartpole_pkg/cartpole_pkg.egg-info to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/install/cartpole_pkg/lib/python3.12/site-packages/cartpole_pkg-0.0.0-py3.12.egg-info\n'}
+[2.362122] (cartpole_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[2.408151] (-) TimerEvent: {}
+[2.508927] (-) TimerEvent: {}
+[2.609633] (-) TimerEvent: {}
+[2.710455] (-) TimerEvent: {}
+[2.811108] (-) TimerEvent: {}
+[2.911732] (-) TimerEvent: {}
+[2.935005] (cartpole_pkg) StdoutLine: {'line': b'Installing cartpole_controller script to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/install/cartpole_pkg/lib/cartpole_pkg\n'}
+[2.938419] (cartpole_pkg) StdoutLine: {'line': b"writing list of installed files to '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/Robotics/ros2_ws/build/cartpole_pkg/install.log'\n"}
+[3.007169] (cartpole_pkg) CommandEnded: {'returncode': 0}
+[3.011850] (-) TimerEvent: {}
+[3.076932] (cartpole_pkg) JobEnded: {'identifier': 'cartpole_pkg', 'rc': 0}
+[3.080093] (-) EventReactorShutdown: {}

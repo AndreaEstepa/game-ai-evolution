@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/cartpole_pkg/cartpole_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/cartpole_pkg/cartpole_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/cartpole_pkg/cartpole_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/cartpole_pkg/cartpole_pkg.egg-info/requires.txt
+writing top-level names to ../../build/cartpole_pkg/cartpole_pkg.egg-info/top_level.txt
+reading manifest file '../../build/cartpole_pkg/cartpole_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/cartpole_pkg/cartpole_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/launch.py -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install/cartpole_pkg/share/cartpole_pkg/launch
+running install_egg_info
+removing '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install/cartpole_pkg/lib/python3.12/site-packages/cartpole_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/cartpole_pkg/cartpole_pkg.egg-info to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install/cartpole_pkg/lib/python3.12/site-packages/cartpole_pkg-0.0.0-py3.12.egg-info
+running install_scripts
+Installing cartpole_controller script to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install/cartpole_pkg/lib/cartpole_pkg
+writing list of installed files to '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/build/cartpole_pkg/install.log'
