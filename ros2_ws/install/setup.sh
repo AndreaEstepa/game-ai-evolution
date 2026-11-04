@@ -7,7 +7,7 @@
 # since a plain shell script can't determine its own path when being sourced
 # either use the provided COLCON_CURRENT_PREFIX
 # or fall back to the build time prefix (if it exists)
-_colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX=/home/robotica/ros2_ws/install
+_colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX=/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/Robotics/ros2_ws/install
 if [ ! -z "$COLCON_CURRENT_PREFIX" ]; then
   _colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX="$COLCON_CURRENT_PREFIX"
 elif [ ! -d "$_colcon_prefix_chain_sh_COLCON_CURRENT_PREFIX" ]; then
@@ -31,7 +31,7 @@ _colcon_prefix_chain_sh_source_script() {
 
 # source chained prefixes
 # setting COLCON_CURRENT_PREFIX avoids relying on the build time prefix of the sourced script
-COLCON_CURRENT_PREFIX="/opt/ros/humble"
+COLCON_CURRENT_PREFIX="/opt/ros/jazzy"
 _colcon_prefix_chain_sh_source_script "$COLCON_CURRENT_PREFIX/local_setup.sh"
 
 

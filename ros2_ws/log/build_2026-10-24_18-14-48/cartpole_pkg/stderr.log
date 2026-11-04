@@ -1,4 +1,0 @@
-/usr/lib/python3.10/distutils/dist.py:274: UserWarning: Unknown distribution option: 'test_require'
-  warnings.warn(msg)
-package init file 'cartpole_pkg/__init__.py' not found (or not a regular file)
-error: can't copy '/home/robotica/ros2_ws/build/cartpole_pkg/resource/cartpole_pkg': doesn't exist or not a regular file

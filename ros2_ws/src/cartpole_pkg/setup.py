@@ -8,7 +8,7 @@ setup(
         packages=[package_name],
         data_files=[('share/ament_index/resource_index/packages', ['resource/' + package_name]), ('share/' + package_name, ['package.xml']),
             (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*'))),
-            (os.path.join('share', package_name, 'workd'), glob(os.path.join('world', '*'))),
+            (os.path.join('share', package_name, 'world'), glob(os.path.join('world', '*'))),
         ],
         install_requires=['setuptools'],
         zip_safe=True,
