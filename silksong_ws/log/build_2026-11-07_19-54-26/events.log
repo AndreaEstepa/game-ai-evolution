@@ -1,0 +1,57 @@
+[0.000000] (-) TimerEvent: {}
+[0.000395] (silksong_capture) JobQueued: {'identifier': 'silksong_capture', 'dependencies': OrderedDict()}
+[0.000570] (silksong_capture) JobStarted: {'identifier': 'silksong_capture'}
+[0.099766] (-) TimerEvent: {}
+[0.201256] (-) TimerEvent: {}
+[0.301870] (-) TimerEvent: {}
+[0.402523] (-) TimerEvent: {}
+[0.503091] (-) TimerEvent: {}
+[0.603421] (-) TimerEvent: {}
+[0.704147] (-) TimerEvent: {}
+[0.804787] (-) TimerEvent: {}
+[0.905523] (-) TimerEvent: {}
+[1.006258] (-) TimerEvent: {}
+[1.106921] (-) TimerEvent: {}
+[1.207355] (-) TimerEvent: {}
+[1.307677] (-) TimerEvent: {}
+[1.407947] (-) TimerEvent: {}
+[1.508211] (-) TimerEvent: {}
+[1.608667] (-) TimerEvent: {}
+[1.709291] (-) TimerEvent: {}
+[1.810068] (-) TimerEvent: {}
+[1.910863] (-) TimerEvent: {}
+[2.011572] (-) TimerEvent: {}
+[2.111906] (-) TimerEvent: {}
+[2.159590] (silksong_capture) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/build', '--no-deps', 'symlink_data'], 'cwd': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'es_ES', 'USER': 'pegaso', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SEAT': 'seat0', 'PT8HOME': '/opt/pt', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pegaso', 'OLDPWD': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws', 'DESKTOP_SESSION': 'cinnamon', 'NVM_BIN': '/home/pegaso/.nvm/versions/node/v24.15.0/bin', 'NVM_INC': '/home/pegaso/.nvm/versions/node/v24.15.0/include/node', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'PS1': '(.venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'NVM_DIR': '/home/pegaso/.nvm', 'COLCON_PREFIX_PATH': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pegaso', 'DESKTOP_AUTOSTART_ID': '10efc25122a3004eee179407023449983500000017950037', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c2', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/.venv/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/pegaso/.opencode/bin:/home/pegaso/.nvm/versions/node/v24.15.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/idea-IC-252.25557.131/bin:/media/pegaso/4C22A6E222A6D06E/Programas/aseprite/build/bin:/media/pegaso/4C22A6E222A6D06E2/Programas/pycharm-2025.3.3/bin/', 'SESSION_MANAGER': 'local/cinnamonRoll:@/tmp/.ICE-unix/1795,unix/cinnamonRoll:/tmp/.ICE-unix/1795', 'GDM_LANG': 'es_ES', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bac1ccf6_6622_4374_9cf9_90839054eb24', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'es_ES.UTF-8', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'VIRTUAL_ENV_PROMPT': '(.venv)', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/pegaso/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.135', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/pegaso', 'AMENT_PREFIX_PATH': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'cinnamon', 'WEBOTS_HOME': '/usr/local/webots', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/.venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'XDG_VTNR': '7', 'PWD': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/pegaso/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share', 'PYTHONPATH': '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[2.211998] (-) TimerEvent: {}
+[2.312373] (-) TimerEvent: {}
+[2.413146] (-) TimerEvent: {}
+[2.513910] (-) TimerEvent: {}
+[2.614525] (-) TimerEvent: {}
+[2.715213] (-) TimerEvent: {}
+[2.815733] (-) TimerEvent: {}
+[2.916270] (-) TimerEvent: {}
+[2.924981] (silksong_capture) StdoutLine: {'line': b'running develop\n'}
+[3.016395] (-) TimerEvent: {}
+[3.116843] (-) TimerEvent: {}
+[3.201007] (silksong_capture) StdoutLine: {'line': b'running egg_info\n'}
+[3.216955] (-) TimerEvent: {}
+[3.257900] (silksong_capture) StdoutLine: {'line': b'writing silksong_capture.egg-info/PKG-INFO\n'}
+[3.259045] (silksong_capture) StdoutLine: {'line': b'writing dependency_links to silksong_capture.egg-info/dependency_links.txt\n'}
+[3.259590] (silksong_capture) StdoutLine: {'line': b'writing entry points to silksong_capture.egg-info/entry_points.txt\n'}
+[3.260169] (silksong_capture) StdoutLine: {'line': b'writing requirements to silksong_capture.egg-info/requires.txt\n'}
+[3.260621] (silksong_capture) StdoutLine: {'line': b'writing top-level names to silksong_capture.egg-info/top_level.txt\n'}
+[3.317103] (-) TimerEvent: {}
+[3.376583] (silksong_capture) StdoutLine: {'line': b"reading manifest file 'silksong_capture.egg-info/SOURCES.txt'\n"}
+[3.383251] (silksong_capture) StdoutLine: {'line': b"writing manifest file 'silksong_capture.egg-info/SOURCES.txt'\n"}
+[3.417231] (-) TimerEvent: {}
+[3.443118] (silksong_capture) StdoutLine: {'line': b'running build_ext\n'}
+[3.444047] (silksong_capture) StdoutLine: {'line': b'Creating /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong-capture.egg-link (link to .)\n'}
+[3.447461] (silksong_capture) StdoutLine: {'line': b'Installing screen_publisher script to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/silksong_ws/install/silksong_capture/lib/silksong_capture\n'}
+[3.450808] (silksong_capture) StdoutLine: {'line': b'\n'}
+[3.451713] (silksong_capture) StdoutLine: {'line': b'Installed /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Rob\xc3\xb3tica/silksong_ws/build/silksong_capture\n'}
+[3.452341] (silksong_capture) StdoutLine: {'line': b'running symlink_data\n'}
+[3.517429] (-) TimerEvent: {}
+[3.535602] (silksong_capture) CommandEnded: {'returncode': 0}
+[3.607216] (silksong_capture) JobEnded: {'identifier': 'silksong_capture', 'rc': 0}
+[3.610499] (-) EventReactorShutdown: {}

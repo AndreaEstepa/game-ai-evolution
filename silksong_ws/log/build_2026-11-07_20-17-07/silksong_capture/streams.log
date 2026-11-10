@@ -1,0 +1,27 @@
+[1.088s] Invoking command in '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/src/silksong_capture': PYTHONPATH=/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/silksong_capture build --build-base /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/build install --record /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/install.log --install-scripts $base/lib/silksong_capture --single-version-externally-managed install_data
+[1.437s] running egg_info
+[1.461s] writing ../../build/silksong_capture/silksong_capture.egg-info/PKG-INFO
+[1.462s] writing dependency_links to ../../build/silksong_capture/silksong_capture.egg-info/dependency_links.txt
+[1.462s] writing entry points to ../../build/silksong_capture/silksong_capture.egg-info/entry_points.txt
+[1.462s] writing requirements to ../../build/silksong_capture/silksong_capture.egg-info/requires.txt
+[1.463s] writing top-level names to ../../build/silksong_capture/silksong_capture.egg-info/top_level.txt
+[1.512s] reading manifest file '../../build/silksong_capture/silksong_capture.egg-info/SOURCES.txt'
+[1.517s] writing manifest file '../../build/silksong_capture/silksong_capture.egg-info/SOURCES.txt'
+[1.517s] running build
+[1.517s] running build_py
+[1.518s] copying silksong_capture/screen_publisher.py -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/build/lib/silksong_capture
+[1.520s] running install
+[1.527s] running install_lib
+[1.554s] copying /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/build/lib/silksong_capture/screen_publisher.py -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong_capture
+[1.557s] byte-compiling /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong_capture/screen_publisher.py to screen_publisher.cpython-312.pyc
+[1.560s] running install_data
+[1.562s] copying package.xml -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/share/silksong_capture
+[1.563s] creating /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/share/silksong_capture/config
+[1.563s] copying config/config.json -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/share/silksong_capture/config
+[1.564s] running install_egg_info
+[1.590s] removing '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong_capture-0.0.0-py3.12.egg-info' (and everything under it)
+[1.593s] Copying ../../build/silksong_capture/silksong_capture.egg-info to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong_capture-0.0.0-py3.12.egg-info
+[1.603s] running install_scripts
+[1.764s] Installing screen_publisher script to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/silksong_capture
+[1.766s] writing list of installed files to '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/install.log'
+[1.800s] Invoked command in '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/src/silksong_capture' returned '0': PYTHONPATH=/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/silksong_capture build --build-base /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/build install --record /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/install.log --install-scripts $base/lib/silksong_capture --single-version-externally-managed install_data

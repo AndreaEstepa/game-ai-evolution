@@ -1,0 +1,2 @@
+[console_scripts]
+screen_publisher = silksong_capture.screen_publisher:main

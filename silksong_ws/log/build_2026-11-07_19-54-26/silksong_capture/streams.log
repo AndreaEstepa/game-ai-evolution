@@ -1,0 +1,17 @@
+[2.162s] Invoking command in '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture': PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/build --no-deps symlink_data
+[2.925s] running develop
+[3.201s] running egg_info
+[3.258s] writing silksong_capture.egg-info/PKG-INFO
+[3.259s] writing dependency_links to silksong_capture.egg-info/dependency_links.txt
+[3.259s] writing entry points to silksong_capture.egg-info/entry_points.txt
+[3.260s] writing requirements to silksong_capture.egg-info/requires.txt
+[3.260s] writing top-level names to silksong_capture.egg-info/top_level.txt
+[3.377s] reading manifest file 'silksong_capture.egg-info/SOURCES.txt'
+[3.383s] writing manifest file 'silksong_capture.egg-info/SOURCES.txt'
+[3.443s] running build_ext
+[3.444s] Creating /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong-capture.egg-link (link to .)
+[3.447s] Installing screen_publisher script to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/silksong_capture
+[3.451s] 
+[3.452s] Installed /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture
+[3.452s] running symlink_data
+[3.537s] Invoked command in '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture' returned '0': PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/build --no-deps symlink_data

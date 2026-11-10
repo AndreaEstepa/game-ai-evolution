@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing silksong_capture.egg-info/PKG-INFO
+writing dependency_links to silksong_capture.egg-info/dependency_links.txt
+writing entry points to silksong_capture.egg-info/entry_points.txt
+writing requirements to silksong_capture.egg-info/requires.txt
+writing top-level names to silksong_capture.egg-info/top_level.txt
+reading manifest file 'silksong_capture.egg-info/SOURCES.txt'
+writing manifest file 'silksong_capture.egg-info/SOURCES.txt'
+running build_ext
+Creating /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong-capture.egg-link (link to .)
+Installing screen_publisher script to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/silksong_capture
+
+Installed /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture
+running symlink_data

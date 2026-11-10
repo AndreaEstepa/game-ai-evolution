@@ -1,0 +1,29 @@
+{
+	"monitor": 1,
+	"region":{
+		"left": 920,
+		"top": 540,
+		"width": 900,
+		"height": 530
+	},
+	"window_name": "Silksong - Captura",
+	"fps_limit": 60,
+
+	"vision": {
+		"resize_width": 320,
+		"resize_height": 180,
+		"threshold": 110,
+		"adaptive_threshold": true,
+		"blur": 3,
+		"show_edges": true,
+		"canny_low": 80,
+		"canny_high": 130,
+		"min_area": 5,
+		
+		"red_detection": {
+			"enabled": true,
+			"saturation_min": 80,
+			"value_min": 50
+		}
+	}
+}
