@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/silksong_capture/silksong_capture.egg-info/PKG-INFO
+writing dependency_links to ../../build/silksong_capture/silksong_capture.egg-info/dependency_links.txt
+writing entry points to ../../build/silksong_capture/silksong_capture.egg-info/entry_points.txt
+writing requirements to ../../build/silksong_capture/silksong_capture.egg-info/requires.txt
+writing top-level names to ../../build/silksong_capture/silksong_capture.egg-info/top_level.txt
+reading manifest file '../../build/silksong_capture/silksong_capture.egg-info/SOURCES.txt'
+writing manifest file '../../build/silksong_capture/silksong_capture.egg-info/SOURCES.txt'
+running build
+running build_py
+copying silksong_capture/screen_publisher.py -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/build/lib/silksong_capture
+running install
+running install_lib
+copying /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/build/lib/silksong_capture/screen_publisher.py -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong_capture
+byte-compiling /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong_capture/screen_publisher.py to screen_publisher.cpython-312.pyc
+running install_data
+copying package.xml -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/share/silksong_capture
+creating /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/share/silksong_capture/config
+copying config/config.json -> /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/share/silksong_capture/config
+running install_egg_info
+removing '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong_capture-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/silksong_capture/silksong_capture.egg-info to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/python3.12/site-packages/silksong_capture-0.0.0-py3.12.egg-info
+running install_scripts
+Installing screen_publisher script to /media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/install/silksong_capture/lib/silksong_capture
+writing list of installed files to '/media/pegaso/4C22A6E222A6D06E2/I.Computadores/Robótica/silksong_ws/build/silksong_capture/install.log'
