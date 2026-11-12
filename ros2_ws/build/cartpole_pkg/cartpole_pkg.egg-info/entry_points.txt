@@ -1,2 +1,0 @@
-[console_scripts]
-cartpole_controller = cartpole_pkg.cartpole_controller:main
