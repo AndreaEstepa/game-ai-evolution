@@ -10,6 +10,7 @@ log/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.venv/
 
 # C/C++
 compile_commands.json
