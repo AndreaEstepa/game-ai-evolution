@@ -1,0 +1,32 @@
+# colcon output
+build/
+install/
+log/
+
+# Python
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+
+# C/C++
+compile_commands.json
+*.o
+*.so
+*.a
+
+# Editors / OS
+.vscode/
+.idea/
+.cache/
+.clangd/
+.DS_Store
+
+# Local artifacts
+*.bag
+*.db3
+*.mcap
+rosbags/
