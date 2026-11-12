@@ -1,6 +1,4 @@
-# Robotics
-
-## Disclaimers
+# Disclaimers
 
 This project uses the video game Hollow Knight: Silksong, by Team Cherry. We do
 not own anything related to the game. Its creators own all the rights to the
