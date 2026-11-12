@@ -1,99 +1,99 @@
-# Silksong: percepción y aprendizaje evolutivo
+# Silksong: perception and evolutionary learning
 
-Este workspace contiene la base de un proyecto para que un agente de inteligencia artificial juegue una sección delimitada del mapa de *Hollow Knight: Silksong*. La idea es conectar la percepción visual del juego con una política neuronal entrenada mediante un algoritmo evolutivo EDNN.
+This workspace contains the basis of a project for an AI agent to play a delimited section of the *Hollow Knight: Silksong* map. The idea is to connect the visual perception of the game with a neural policy trained using an EDNN evolutionary algorithm.
 
-> **Estado actual:** está implementada la captura de pantalla, un preprocesado básico de imagen y la publicación de una máscara visual como tópico ROS 2. La red neuronal, el algoritmo evolutivo, la evaluación del progreso y el envío de controles al juego todavía no están implementados. Por tanto, el nodo actual observa la pantalla, pero no juega.
+> **Current status:** Screen capture, basic image preprocessing and publication of a visual mask as a ROS 2 topic are implemented. The neural network, evolutionary algorithm, progress evaluation and sending controls to the game are not yet implemented. Therefore, the current node watches the screen, but does not play.
 
-## Objetivo y arquitectura prevista
+## Objective and planned architecture
 
-El objetivo es entrenar y evaluar un agente en una sección concreta del mapa, empezando por un recorrido o tarea acotados. El flujo previsto es:
+The objective is to train and evaluate an agent in a specific section of the map, starting with a limited route or task. The expected flow is:
 
 ```text
-Pantalla del juego
-       ↓
-Captura y preprocesado visual (implementados)
-       ↓
-Observación para el agente
-       ↓
-Política neuronal EDNN (pendiente)
-       ↓
-Acción de juego (pendiente)
-       ↓
-Evaluación del episodio y fitness (pendiente)
-       └──────────────→ siguiente generación
+game screen
+↓
+Visual capture and preprocessing (implemented)
+↓
+Observation for the agent
+↓
+EDNN neural policy (pending)
+↓
+Game action (pending)
+↓
+Episode evaluation and fitness (pending)
+└──────────────→ next generation
 ```
 
-En el enfoque evolutivo, cada individuo representa una política neuronal candidata. Se evalúa durante uno o más episodios y se le asigna una puntuación de *fitness*; el algoritmo usa esas puntuaciones para generar la siguiente población. La representación de los individuos, las operaciones evolutivas, las entradas y salidas de la red, y la fórmula de *fitness* se definirán al implementar el entrenador. No se presupone que el agente ya tenga navegación, combate, memoria o detección semántica.
+In the evolutionary approach, each individual represents a candidate neural policy. It is evaluated during one or more episodes and is assigned a *fitness* score; the algorithm uses those scores to generate the next population. The representation of the individuals, the evolutionary operations, the inputs and outputs of the network, and the *fitness* formula will be defined when implementing the trainer. It is not assumed that the agent already has navigation, combat, memory, or semantic detection.
 
-## Qué existe hoy
+## What exists today
 
-El paquete ROS 2 `silksong_capture` captura una región de un monitor, la procesa con OpenCV y publica una imagen monocromática en `/vision/red_mask` (`sensor_msgs/msg/Image`). La imagen publicada combina una máscara HSV de píxeles rojos con los bordes detectados; se reduce a `320 × 180` con la configuración actual.
+The ROS 2 package `silksong_capture` captures a region of a monitor, processes it with OpenCV, and publishes a monochrome image to `/vision/red_mask` (`sensor_msgs/msg/Image`). The published image combines an HSV mask of red pixels with the detected edges; is reduced to `320 × 180` with current settings.
 
-Los scripts de `scripts/` sirven para probar la captura y visualizar el procesamiento sin ROS 2. El nodo ROS 2 integra esa funcionalidad para que otros nodos puedan consumir la imagen. Aún no hay nodo de agente ni flujo de entrenamiento.
+The `scripts/` scripts are used to test capture and visualize processing without ROS 2. The ROS 2 node integrates that functionality so that other nodes can consume the image. There is no agent node or training flow yet.
 
-## Estructura
+## Structure
 
 ```text
 silksong_ws/
 ├── README.md
-├── config.json                         # Configuración para los scripts de prueba
+├── config.json # Configuration for test scripts
 ├── scripts/
-│   ├── capture_test.py                 # Prueba de captura y visualización
-│   ├── image_processor.py              # Funciones de preprocesado y detección
-│   └── processor_test.py               # Captura y visualiza las salidas del procesador
+│ ├── capture_test.py # Capture and display test
+│ ├── image_processor.py # Preprocessing and detection functions
+│ └── processor_test.py # Capture and display processor outputs
 └── src/
-    └── silksong_capture/
-        ├── config/config.json          # Configuración instalada con el paquete ROS 2
-        ├── silksong_capture/
-        │   ├── image_processor.py      # Procesamiento utilizado por el nodo ROS 2
-        │   └── screen_publisher.py     # Publicador del tópico de visión
-        ├── package.xml
-        └── setup.py
+└── silksong_capture/
+├── config/config.json # Configuration installed with ROS 2 package
+├── silksong_capture/
+│ ├── image_processor.py # Processing used by ROS node 2
+│ └── screen_publisher.py # Vision topic publisher
+├── package.xml
+└── setup.py
 ```
 
-`build/`, `install/` y `log/` son directorios generados por `colcon`; no contienen el código fuente del proyecto.
+`build/`, `install/` and `log/` are directories generated by `colcon`; They do not contain the source code of the project.
 
-## Configuración de captura
+## Capture Settings
 
-Los parámetros están en [config.json](config.json) y en [src/silksong_capture/config/config.json](src/silksong_capture/config/config.json). Los scripts leen el primero y el paquete ROS 2 carga el segundo; hay que mantenerlos sincronizados cuando se cambien los valores.
+The parameters are in [config.json](config.json) and in [src/silksong_capture/config/config.json](src/silksong_capture/config/config.json). The scripts read the first and the ROS 2 package loads the second; You have to keep them synchronized when the values are changed.
 
-| Clave | Uso |
+| Key | Usage |
 |---|---|
-| `monitor` | Índice del monitor que se captura. |
-| `region` | Rectángulo capturado (`left`, `top`, `width`, `height`), relativo al monitor. |
-| `window_name` | Título de ventana usado por los scripts de prueba. |
-| `fps_limit` | Frecuencia objetivo de captura/publicación. |
-| `vision.resize_width`, `vision.resize_height` | Resolución de procesamiento y publicación. |
-| `vision.blur`, `vision.threshold`, `vision.adaptive_threshold` | Parámetros de reducción de ruido y umbralización. |
-| `vision.canny_low`, `vision.canny_high`, `vision.min_area` | Parámetros de detección y filtrado de contornos. |
-| `vision.red_detection.enabled` | Activa la detección de rojo en los scripts de prueba. |
-| `vision.red_detection.saturation_min`, `vision.red_detection.value_min` | Umbrales HSV para la máscara roja. |
+| `monitor` | Index of the monitor being captured. |
+| `region` | Captured rectangle (`left`, `top`, `width`, `height`), relative to the monitor. |
+| `window_name` | Window title used by test scripts. |
+| `fps_limit` | Target capture/publish frequency. |
+| `vision.resize_width`, `vision.resize_height` | Processing and publication resolution. |
+| `vision.blur`, `vision.threshold`, `vision.adaptive_threshold` | Noise reduction and thresholding parameters. |
+| `vision.canny_low`, `vision.canny_high`, `vision.min_area` | Contour detection and filtering parameters. |
+| `vision.red_detection.enabled` | Enable red detection in test scripts. |
+| `vision.red_detection.saturation_min`, `vision.red_detection.value_min` | HSV thresholds for the red mask. |
 
-La posición de la región depende de la resolución, la disposición de monitores y la ventana del juego. Hay que ajustarla al entorno donde se ejecute.
+The position of the region depends on the resolution, monitor layout and game window. It must be adjusted to the environment where it is executed.
 
-## Requisitos
+## Requirements
 
-- Python 3.
-- ROS 2 y `colcon` para compilar y ejecutar el nodo.
-- Dependencias de ROS del paquete: `rclpy`, `sensor_msgs`, `cv_bridge` y `ament_index_python`.
-- Bibliotecas de Python utilizadas por el código: `mss`, `numpy` y `opencv-python` (`cv2`).
+-Python 3.
+- ROS 2 and `colcon` to compile and run the node.
+- Package ROS dependencies: `rclpy`, `sensor_msgs`, `cv_bridge` and `ament_index_python`.
+- Python libraries used by the code: `mss`, `numpy` and `opencv-python` (`cv2`).
 
-La instalación de ROS 2 y de sus dependencias varía según la distribución y el sistema operativo. Instala también las bibliotecas de Python en el entorno que vaya a ejecutar los scripts y el nodo.
+The installation of ROS 2 and its dependencies varies depending on the distribution and operating system. Also install the Python libraries in the environment that will run the scripts and node.
 
-## Ejecutar las pruebas visuales
+## Run the visual tests
 
-Desde la raíz de `silksong_ws`, con las dependencias de Python disponibles:
+From the root of `silksong_ws`, with Python dependencies available:
 
 ```bash
 python3 scripts/capture_test.py
 python3 scripts/processor_test.py
 ```
 
-`capture_test.py` muestra la región capturada. `processor_test.py` muestra ventanas para la imagen original, la imagen binaria, los bordes, la escala de grises y, si está activada, la máscara roja combinada con los bordes. Pulsa `q` para cerrar las ventanas.
+`capture_test.py` shows the captured region. `processor_test.py` displays windows for the original image, the binary image, the edges, the grayscale, and, if enabled, the red mask combined with the edges. Press `q` to close the windows.
 
-## Compilar y ejecutar el publicador ROS 2
+## Compile and run the ROS 2 publisher
 
-En una terminal con el entorno de ROS 2 instalado y configurado:
+On a terminal with the ROS 2 environment installed and configured:
 
 ```bash
 cd silksong_ws
@@ -103,26 +103,26 @@ source install/setup.bash
 ros2 run silksong_capture screen_publisher
 ```
 
-Sustituye `<distro>` por la distribución de ROS 2 instalada. El nodo publica en:
+Replace `<distro>` with the installed ROS 2 distribution. The node publishes to:
 
 ```text
 /vision/red_mask
 ```
 
-Para comprobar el tópico desde otra terminal con ROS 2 configurado:
+To check the topic from another terminal with ROS 2 configured:
 
 ```bash
 ros2 topic list
 ros2 run rqt_image_view rqt_image_view
 ```
 
-En `rqt_image_view`, selecciona `/vision/red_mask`.
+In `rqt_image_view`, select `/vision/red_mask`.
 
-## Próximos componentes del agente
+## Upcoming agent components
 
-1. **Definir una tarea y episodio:** delimitar la sección del mapa, el estado inicial, el objetivo y las condiciones de terminación.
-2. **Definir observaciones y acciones:** decidir qué información recibe la red y qué controles discretos o continuos puede emitir.
-3. **Implementar la interfaz de control:** conectar las acciones con el juego de forma reproducible y segura para reiniciar episodios.
-4. **Implementar EDNN:** especificar la codificación de la red en cada individuo, la población y los operadores evolutivos.
-5. **Diseñar el *fitness* y el registro:** medir el desempeño por episodio y guardar generaciones, puntuaciones y mejores individuos.
-6. **Evaluar y ajustar:** comparar resultados en condiciones repetibles antes de ampliar la zona o la dificultad.
+1. **Define a task and episode:** delimit the map section, the initial state, the objective and the termination conditions.
+2. **Define observations and actions:** decide what information the network receives and what discrete or continuous controls it can issue.
+3. **Implement control interface:** connect actions to the game in a reproducible and safe way to restart episodes.
+4. **Implement EDNN:** specify the network coding on each individual, population and evolutionary operators.
+5. **Design *fitness* and record:** measure performance by episode and save generations, scores and best individuals.
+6. **Evaluate and adjust:** Compare results under repeatable conditions before expanding the area or difficulty.
