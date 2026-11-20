@@ -40,3 +40,8 @@ $RECYCLE.BIN/
 *~
 .tmp/
 temp/
+
+# ROS 2 / Colcon generated files
+build/
+install/
+log/

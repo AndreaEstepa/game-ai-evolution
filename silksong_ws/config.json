@@ -1,10 +1,10 @@
 {
 	"monitor": 1,
 	"region":{
-		"left": 920,
-		"top": 540,
-		"width": 900,
-		"height": 530
+		"left": 960,
+		"top": 510,
+		"width": 960,
+		"height": 540
 	},
 	"window_name": "Silksong - Captura",
 	"fps_limit": 60,
@@ -19,6 +19,20 @@
 		"canny_low": 80,
 		"canny_high": 130,
 		"min_area": 5,
+		"hornet_threshold": 0.6,
+		"hornet_search_mode": "color",
+		"temporal_priority": 0.0,
+		"temporal_distance_scale": 100.0,
+		"detect_flowers": true,
+		"flower_threshold": 0.6,
+		"flower_search_mode": "red",
+		"combined_flower_weights": {
+			"color": 1.0,
+			"edges": 1.0,
+			"red": 3.0
+		},
+		"combined_flower_overlap": 0.3,
+		"combined_flower_min_score": 0.5,
 		
 		"red_detection": {
 			"enabled": true,

@@ -1,6 +1,14 @@
 from setuptools import find_packages, setup
-
 package_name = 'silksong_capture'
+template_names = [
+    'standR.png',
+    'standL.png',
+    'standBinR.png',
+    'standBinL.png',
+    'flower.png',
+    'flowerBin.png',
+    'flowerRed.png',
+]
 
 setup(
     name=package_name,
@@ -11,6 +19,8 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/config', ['config/config.json']),
+        ('share/' + package_name + '/templates',
+            ['../../templates/' + name for name in template_names]),
     ],
     install_requires=['setuptools', 'mss'],
     zip_safe=True,
