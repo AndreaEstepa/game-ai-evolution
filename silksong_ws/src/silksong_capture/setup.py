@@ -22,7 +22,7 @@ setup(
         ('share/' + package_name + '/templates',
             ['../../templates/' + name for name in template_names]),
     ],
-    install_requires=['setuptools', 'mss'],
+    install_requires=['setuptools', 'mss', 'numpy', 'opencv-python'],
     zip_safe=True,
     maintainer='pegaso',
     maintainer_email='pegasojuegos@gmail.com',
@@ -36,6 +36,7 @@ setup(
     entry_points={
         'console_scripts': [
             'screen_publisher = silksong_capture.screen_publisher:main',
+            'evolutionary_agent = silksong_capture.agent.agent_node:main',
         ],
     },
 )

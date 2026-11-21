@@ -27,6 +27,7 @@ silksong_ws/
 │   ├── capture_test.py
 │   ├── image_processor.py
 │   └── processor_test.py
+├── templates/
 ├── src/
 │   └── silksong_capture/
 │       ├── config/
@@ -34,10 +35,16 @@ silksong_ws/
 │       ├── silksong_capture/
 │       │   ├── __init__.py
 │       │   ├── image_processor.py
-│       │   └── screen_publisher.py
+│       │   ├── screen_publisher.py
+│       │   └── agent/
+│       │       ├── observations.py
+│       │       ├── network.py
+│       │       ├── evolution.py
+│       │       └── agent_node.py
 │       ├── package.xml
 │       ├── setup.py
 │       └── test/
+│           └── test_agent_core.py
 └── build/
 ```
 
@@ -115,7 +122,7 @@ Este es el punto clave del proyecto. La clase `ScreenPublisher(Node)` se encarga
 - transformar la imagen a BGR
 - procesarla usando `detect_red()` y `process_image()`
 - combinar `red_mask` con `edges`
-- convertir el resultado a un mensaje OpenCV con `CvBridge`
+- convertir el resultado a un mensaje de imagen `mono8` mediante `CvBridge`
 - publicar el mensaje en ROS 2
 
 El flujo real es:
@@ -131,9 +138,9 @@ detect_red() + process_image()
    ↓
 bitwise_or(mask, edges)
    ↓
-CvBridge -> Image msg
+CvBridge -> sensor_msgs/Image mono8
    ↓
-/vision/red_mask
+/vision/red_mask + /vision/detections
 ```
 
 ### [src/silksong_capture/silksong_capture/image_processor.py](src/silksong_capture/silksong_capture/image_processor.py)
@@ -151,6 +158,58 @@ El archivo final `screen_publisher.py` importa exactamente estas funciones:
 from .image_processor import process_image, detect_red
 ```
 
+## Agente evolutivo (baseline)
+
+El publicador de visión también envía `/vision/detections` como `std_msgs/msg/String`.
+El contenido JSON incluye la posición y orientación detectadas de Hornet y una lista
+de flores con sus posiciones y puntuaciones. El topic `/vision/red_mask` sigue
+publicando la máscara como `sensor_msgs/msg/Image`.
+
+El nuevo ejecutable `evolutionary_agent` se suscribe a `/vision/detections` y
+publica acciones abstractas en `/agent/action` (`std_msgs/msg/String`). La
+observación fija de 10 valores normaliza la posición y orientación de Hornet y
+la posición/confianza de la flor más cercana. La política inicial es una MLP
+10-16-8 con activación `tanh` y elige una acción discreta: `neutral`, `left`,
+`right`, `jump`, `left_jump`, `right_jump`, `attack` o `dash`.
+
+El baseline usa una población de 50 individuos, torneo de 3, 2 élites, cruce
+uniforme y mutación gaussiana. Cada individuo debe evaluarse en un episodio:
+
+1. Reinicia manualmente el juego en el mismo estado inicial.
+2. Inicia el episodio enviando `true` a `/agent/start_episode` (`std_msgs/msg/Bool`).
+3. Un adaptador de controles debe consumir `/agent/action` para convertir los
+   nombres de botones en entradas del juego. Ese adaptador todavía no está
+   implementado.
+4. Al terminar el episodio, envía su puntuación a `/agent/fitness`
+   (`std_msgs/msg/Float32`). El nodo la registra y selecciona el siguiente
+   individuo. La puntuación y el momento de terminar cada episodio son manuales;
+   la fórmula de *fitness*, el reinicio automático y el control del juego están
+   pendientes.
+
+El historial se guarda en `evolution_scores.csv` y la mejor política en
+`best_policy.json`, relativos al directorio desde el que se ejecuta el nodo.
+Los parámetros de población, mutación, dimensiones de imagen y rutas de salida
+se pueden sobrescribir como parámetros ROS 2.
+
+Ejemplo de evaluación manual, con el publicador de visión y el agente ya
+ejecutándose:
+
+```bash
+ros2 topic echo /agent/action
+ros2 topic pub --once /agent/start_episode std_msgs/msg/Bool "{data: true}"
+# Al terminar el episodio, envía una puntuación: los valores mayores son mejores.
+ros2 topic pub --once /agent/fitness std_msgs/msg/Float32 "{data: 1.0}"
+```
+
+Repite el proceso con el juego reiniciado para cada individuo. La generación
+cambia automáticamente al registrar las 50 puntuaciones.
+
+Pruebas del núcleo (sin ROS 2):
+
+```bash
+python3 -m unittest discover -s src/silksong_capture/test -p "test_agent_core.py"
+```
+
 ## Package ROS 2
 
 La estructura del paquete se define en:
@@ -161,8 +220,8 @@ La estructura del paquete se define en:
 Aquí se registran:
 
 - el nombre del paquete: `silksong_capture`
-- la dependencia de `rclpy`, `sensor_msgs`, `cv_bridge`, `ament_index_python`
-- el entry point `screen_publisher = silksong_capture.screen_publisher:main`
+- las dependencias ROS `rclpy`, `sensor_msgs`, `std_msgs`, `cv_bridge` y `ament_index_python`
+- los entry points `screen_publisher` y `evolutionary_agent`
 
 Esto permite ejecutar el nodo como un executable de ROS 2 con un comando como:
 
@@ -241,10 +300,11 @@ Y después se lanza el publicador:
 ros2 run silksong_capture screen_publisher
 ```
 
-Esto empezará a capturar la región configurada, procesar la imagen y publicar el resultado en el topic:
+Esto empezará a capturar la región configurada, procesar la imagen y publicar el resultado en los topics:
 
 ```text
 /vision/red_mask
+/vision/detections
 ```
 
 ### 4) Ver la imagen publicada con `rqt_image_view`
