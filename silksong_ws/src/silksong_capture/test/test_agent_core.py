@@ -6,6 +6,11 @@ import numpy as np
 from silksong_capture.agent.evolution import GeneticAlgorithm
 from silksong_capture.agent.network import MLPPolicy
 from silksong_capture.agent.observations import OBSERVATION_SIZE, encode_detections
+from silksong_capture.agent.episode_core import (
+    is_black_frame,
+    success_fitness,
+    timeout_fitness,
+)
 
 
 class ObservationTests(unittest.TestCase):
@@ -90,6 +95,31 @@ class EvolutionTests(unittest.TestCase):
         )
         with self.assertRaises(ValueError):
             evolution.submit_fitness(float("nan"))
+
+
+class EpisodeTests(unittest.TestCase):
+    def test_black_screen_is_detected(self):
+        black = np.zeros((180, 320, 3), dtype=np.uint8)
+        self.assertTrue(is_black_frame(black))
+
+    def test_normal_screen_is_not_black(self):
+        normal = np.full((180, 320, 3), 220, dtype=np.uint8)
+        self.assertFalse(is_black_frame(normal))
+
+    def test_timeout_fitness_uses_progress(self):
+        fitness = timeout_fitness(
+            max_progress=0.5,
+            elapsed_seconds=60,
+            timeout_seconds=60,
+        )
+        self.assertEqual(fitness, 30.0)
+
+    def test_success_fitness_has_completion_bonus(self):
+        fitness = success_fitness(
+            elapsed_seconds=30,
+            timeout_seconds=60,
+        )
+        self.assertEqual(fitness, 1300.0)
 
 
 if __name__ == "__main__":

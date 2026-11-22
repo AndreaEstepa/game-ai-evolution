@@ -213,6 +213,7 @@ class ScreenPublisher(Node):
         self.vision_config = config["vision"]
 
         self.publisher_ = self.create_publisher(Image, "/vision/red_mask", 10)
+        self.screen_publisher = self.create_publisher(Image, "/vision/screen", 10)
         self.detections_publisher_ = self.create_publisher(String, "/vision/detections", 10)
         self.bridge = CvBridge()
         if self.fps_limit <= 0:
@@ -305,6 +306,12 @@ class ScreenPublisher(Node):
         screenshot = self.sct.grab(region)
         frame = np.array(screenshot)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGRA2BGR)
+        processed_screen = reduce_resolution(frame, self.vision_config)
+
+        screen_msg = self.bridge.cv2_to_imgmsg(processed_screen, encoding="bgr8")
+        screen_msg.header.stamp = self.get_clock().now().to_msg()
+        screen_msg.header.frame_id = "game_screen"
+        self.screen_publisher.publish(screen_msg)
 
         binary, edges, gray = process_image(frame, self.vision_config)
         processed = reduce_resolution(frame, self.vision_config)

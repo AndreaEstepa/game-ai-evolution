@@ -43,7 +43,7 @@ def encode_detections(payload, image_width=320, image_height=180):
     """
     Emcodea las detecciones JSON en una observacion normalizada de tamaño fijo
     """
-    # Lee el mensaje y comprueba que sea un objeto JSON.
+    #lee el mensaje y comprueba que sea un objeto JSON
     try:
         detections = json.loads(payload)
     except (json.JSONDecodeError, TypeError) as error:

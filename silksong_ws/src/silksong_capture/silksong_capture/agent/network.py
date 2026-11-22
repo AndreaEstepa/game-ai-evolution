@@ -31,12 +31,7 @@ class MLPPolicy:
         """
         Devuelve el numero de pesos y sesgos en la politica
         """
-        return (
-            self.hidden_size * self.input_size
-            + self.hidden_size
-            + len(self.action_names) * self.hidden_size
-            + len(self.action_names)
-        )
+        return (self.hidden_size * self.input_size+self.hidden_size+ len(self.action_names) * self.hidden_size + len(self.action_names))
 
     def forward(self, genome, observation):
         """

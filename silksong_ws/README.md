@@ -210,6 +210,40 @@ Pruebas del núcleo (sin ROS 2):
 python3 -m unittest discover -s src/silksong_capture/test -p "test_agent_core.py"
 ```
 
+## Control y episodios
+
+El nodo `game_control` convierte `/agent/action` en teclas de Windows:
+
+- izquierda/derecha: flechas del teclado;
+- arriba/abajo: flechas verticales;
+- salto: `Z`;
+- ataque: `X`;
+- dash: `C`;
+- curar: `D`;
+- interacción: `E`.
+
+El nodo `episode_manager` inicia episodios de 60 segundos y termina uno
+cuando detecta varios fotogramas casi negros seguidos. Esta detección representa
+el fundido negro antes de la siguiente sala. En éxito registra una bonificación
+de fitness; en timeout usa el progreso horizontal máximo observado.
+
+Para ejecutar los tres nodos principales:
+
+```bat
+ros2 run silksong_capture screen_publisher
+ros2 run silksong_capture evolutionary_agent
+ros2 run silksong_capture episode_manager
+ros2 run silksong_capture game_control
+```
+
+El reinicio automático a una pantalla jugable no se puede inferir de forma segura
+desde el código. Puedes configurar el nodo `game_control` con las teclas necesarias
+mediante el parámetro `reset_keys`, por ejemplo:
+
+```bat
+ros2 run silksong_capture game_control --ros-args -p reset_keys:=[escape]
+```
+
 ## Package ROS 2
 
 La estructura del paquete se define en:

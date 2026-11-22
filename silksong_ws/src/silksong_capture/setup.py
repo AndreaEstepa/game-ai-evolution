@@ -37,6 +37,8 @@ setup(
         'console_scripts': [
             'screen_publisher = silksong_capture.screen_publisher:main',
             'evolutionary_agent = silksong_capture.agent.agent_node:main',
+            'game_control = silksong_capture.agent.control_node:main',
+            'episode_manager = silksong_capture.agent.episode_node:main',
         ],
     },
 )
