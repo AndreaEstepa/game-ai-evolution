@@ -6,4 +6,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     openjdk-21-jdk
 RUN rm -rf /var/lib/apt/lists/*
 
-CMD ["bash"]
+RUN mkdir -p /workspace
+COPY . /workspace
+
+WORKDIR /workspace
+
+ENTRYPOINT ["/workspace/start.sh"]
