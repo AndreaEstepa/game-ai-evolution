@@ -18,4 +18,7 @@ WORKDIR /workspace
 COPY ./entrypoint.sh /workspace/entrypoint.sh
 RUN chmod 555 /workspace/entrypoint.sh
 
+WORKDIR /workspace/project
+COPY ./silksong_ws /workspace/project
+
 ENTRYPOINT ["/workspace/entrypoint.sh"]
