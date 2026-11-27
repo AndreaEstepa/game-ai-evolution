@@ -1,13 +1,13 @@
 #!/bin/sh
 
-. .env
-
-if [ -n "${STEAM_USER_ID}" ]; then
-    printf 'error: STEAM_USER_ID is required before configuring\n' >&2
+if [ ! -f "./.steamuid" ]; then
+    printf 'error: no Steam user ID file found\n' >&2
     exit 1
 fi
 
-SILKSONG_CONFIG_DIR="/root/.config/unity3d/Team Cherry/Hollow Knight Silksong/${STEAM_USER_ID}"
+IFS= read -r STEAM_USER_ID < "./.steamuid"
+
+SILKSONG_CONFIG_DIR="${HOME}/.config/unity3d/Team Cherry/Hollow Knight Silksong/${STEAM_USER_ID}"
 
 mkdir -p "${SILKSONG_CONFIG_DIR}"
 cp -r -t "${SILKSONG_CONFIG_DIR}" \
