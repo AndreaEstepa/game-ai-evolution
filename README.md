@@ -57,5 +57,5 @@ state, and needed configurations to make everything work.
 3. Start Cogfly and import the profile found in `resources/cogfly/profile.r2z`.
 4. In the modloader, start Silksong from the imported profile.
 5. Once in the game, select the second profile and wait for it to start.
-6. Run `docker compose up` to start the ROS 2 environment and wait for the
-   magic to happen.
+6. Run `xhost +local: && docker compose up` to start the ROS 2 environment and
+   wait for the magic to happen.
