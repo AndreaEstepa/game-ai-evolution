@@ -47,8 +47,8 @@ display and showing graphical user interfaces in it.
 ### Disclaimer
 
 We do not distribute any of the binaries used. However, we store the following
-files in the public repository: the vanilla game save, the Snapthot save state,
-and needed configurations to make everything work.
+files in the public repository: the vanilla game save, the Benchwarp save
+state, and needed configurations to make everything work.
 
 ## Building and Running the Environment
 
