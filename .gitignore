@@ -45,3 +45,6 @@ temp/
 build/
 install/
 log/
+
+# Environment file
+.env
