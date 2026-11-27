@@ -52,7 +52,7 @@ state, and needed configurations to make everything work.
 
 ## Building and Running the Environment
 
-1. Run `./configure` to configure the environment.
+1. Run `chmod u+x configure && ./configure` to configure the environment.
 2. Start Cogfly and import the profile found in `resources/cogfly/profile.r2z`.
 3. In the modloader, start Silksong from the imported profile.
 4. Once in the game, select the second profile and wait for it to start.
