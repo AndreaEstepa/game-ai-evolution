@@ -24,7 +24,7 @@ cleanup() {
 }
 trap cleanup EXIT INT TERM
 
-if wait -n "${published_pid}" "${agent_pid}"; then
+if wait -n "${publisher_pid}" "${agent_pid}"; then
     status=0
 else
     status=$?
