@@ -1,0 +1,15 @@
+#!/bin/sh
+
+STEAM_USER_ID=
+
+if [ -n "${STEAM_USER_ID}" ]; then
+    printf 'error: STEAM_USER_ID is required before configuring\n' >&2
+    exit 1
+fi
+
+SILKSONG_CONFIG_DIR="/root/.config/unity3d/Team Cherry/Hollow Knight Silksong/${STEAM_USER_ID}"
+
+mkdir -p "${SILKSONG_CONFIG_DIR}"
+cp -r -t "${SILKSONG_CONFIG_DIR}" \
+    "./resources/silksong/profile_id/Modded" \
+    "./resources/silksong/profile_id/user2.dat"
