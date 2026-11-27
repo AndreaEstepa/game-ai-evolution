@@ -1,6 +1,6 @@
 #!/bin/sh
 
-STEAM_USER_ID=
+. .env
 
 if [ -n "${STEAM_USER_ID}" ]; then
     printf 'error: STEAM_USER_ID is required before configuring\n' >&2
