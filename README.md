@@ -52,7 +52,7 @@ state, and needed configurations to make everything work.
 
 ## Building and Running the Environment
 
-1. Create a `.env` file with `STEAM_USER_ID=your-steam-id`.
+1. Create a `.steamuid` file with your Steam user ID inside (just the number).
 2. Run `chmod u+x configure && ./configure` to configure the environment.
 3. Start Cogfly and import the profile found in `resources/cogfly/profile.r2z`.
 4. In the modloader, start Silksong from the imported profile.
