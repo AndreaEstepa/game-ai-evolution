@@ -52,9 +52,10 @@ state, and needed configurations to make everything work.
 
 ## Building and Running the Environment
 
-1. Run `chmod u+x configure && ./configure` to configure the environment.
-2. Start Cogfly and import the profile found in `resources/cogfly/profile.r2z`.
-3. In the modloader, start Silksong from the imported profile.
-4. Once in the game, select the second profile and wait for it to start.
-5. Run `docker compose up` to start the ROS 2 environment and wait for the
+1. Create a `.env` file with `STEAM_USER_ID=your-steam-id`.
+2. Run `chmod u+x configure && ./configure` to configure the environment.
+3. Start Cogfly and import the profile found in `resources/cogfly/profile.r2z`.
+4. In the modloader, start Silksong from the imported profile.
+5. Once in the game, select the second profile and wait for it to start.
+6. Run `docker compose up` to start the ROS 2 environment and wait for the
    magic to happen.
